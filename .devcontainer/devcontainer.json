@@ -1,5 +1,5 @@
 {
-	"name": "Angular dev",
+	"name": "Angular",
 	"build": { "dockerfile": "Dockerfile" },
 	"features": {
 		"ghcr.io/devcontainers-contrib/features/angular-cli:2": {}
@@ -28,7 +28,9 @@
 				"PKief.material-icon-theme",
 				"christian-kohler.path-intellisense",
 				"Angular.ng-template",
-				"johnpapa.vscode-peacock"
+				"johnpapa.vscode-peacock",
+				"dbaeumer.vscode-eslint",
+				"ms-edgedevtools.vscode-edge-devtools"
 			],
 			"settings": {
 				"peacock.remoteColor": "#dd0531"
