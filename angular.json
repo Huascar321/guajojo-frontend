@@ -30,6 +30,7 @@
               "projects/knowledge-builder/src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/deeppurple-amber.css",
               "projects/knowledge-builder/src/styles.scss"
             ],
             "scripts": []
@@ -93,6 +94,7 @@
               "projects/knowledge-builder/src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/deeppurple-amber.css",
               "projects/knowledge-builder/src/styles.scss"
             ],
             "scripts": []
@@ -127,6 +129,7 @@
               "projects/chatroom/src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/deeppurple-amber.css",
               "projects/chatroom/src/styles.scss"
             ],
             "scripts": []
@@ -190,6 +193,7 @@
               "projects/chatroom/src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/deeppurple-amber.css",
               "projects/chatroom/src/styles.scss"
             ],
             "scripts": []

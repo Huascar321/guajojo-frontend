@@ -1,0 +1,60 @@
+<div class="flex w-full h-full justify-center items-center bg-[#e7e8f1]">
+  <mat-card
+    class="flex flex-row bg-slate-100 shadow-xl rounded-md w-[90vw] lg:w-[80vw] xl:w-[70vw] 2xl:w-[50vw]"
+  >
+    <div class="my-12 flex flex-col w-full md:w-[50%] m-auto mx-5">
+      <img
+        class="w-20 mx-auto bg-cover"
+        src="../../../../assets/logo.png"
+        alt="logo"
+      />
+      <mat-card-title class="m-5 mr-auto">Iniciar sesión</mat-card-title>
+      <mat-card-content class="mt-5">
+        <form
+          *ngIf="loginForm"
+          [formGroup]="loginForm"
+          (ngSubmit)="login()"
+          class="w-full"
+        >
+          <div>
+            <mat-form-field class="w-full">
+              <input
+                type="text"
+                matInput
+                placeholder="Usuario"
+                formControlName="username"
+              />
+            </mat-form-field>
+          </div>
+
+          <div>
+            <mat-form-field class="w-full">
+              <input
+                type="password"
+                matInput
+                placeholder="Contraseña"
+                formControlName="password"
+              />
+            </mat-form-field>
+          </div>
+
+          <div *ngIf="errorMessage" class="error">
+            {{ errorMessage }}
+          </div>
+
+          <button
+            type="submit"
+            mat-raised-button
+            color="primary"
+            class="w-full h-12 mt-4"
+          >
+            Acceder
+          </button>
+        </form>
+      </mat-card-content>
+    </div>
+    <div class="w-[50%] hidden md:block">
+      <img class="w-full h-full" src="assets/bg.jpg" alt="school background" />
+    </div>
+  </mat-card>
+</div>

@@ -1,0 +1,14 @@
+.success-snackbar {
+  --mdc-snackbar-container-color: var(--success-color);
+  --mat-mdc-snack-bar-button-color: white;
+}
+
+.warning-snackbar {
+  --mdc-snackbar-container-color: var(--warning-color);
+  --mat-mdc-snack-bar-button-color: white;
+}
+
+.error-snackbar {
+  --mdc-snackbar-container-color: var(--error-color);
+  --mat-mdc-snack-bar-button-color: white;
+}

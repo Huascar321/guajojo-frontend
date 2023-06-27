@@ -1,0 +1,40 @@
+.sidenav-container {
+  height: 100%;
+  overflow: inherit;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.app-nav-accordion {
+  .mat-expansion-panel {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+
+    &.mat-expansion-panel-spacing {
+      margin: 0;
+    }
+
+    .mat-expansion-panel-body {
+      padding: 0;
+    }
+
+    .mat-expansion-panel-header {
+      height: 40px;
+      padding: 0 24px 0 16px;
+    }
+
+    .mat-expansion-panel-header-title {
+      color: rgba(0, 0, 0, 0.54);
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+}

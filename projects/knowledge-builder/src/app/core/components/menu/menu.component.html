@@ -1,0 +1,58 @@
+<mat-sidenav-container class="sidenav-container" *ngIf="!isInitialRoute">
+  <mat-sidenav
+    #sidenav
+    class="w-[200px] 2xl:w-[280px]"
+    fixedInViewport
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="(isHandset$ | async) === false"
+  >
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-accordion
+      class="app-nav-accordion"
+      [multi]="true"
+      *ngIf="userProfile && data"
+    >
+      <app-panel
+        [data]="panel"
+        *ngFor="let panel of data.panels"
+        [sidenav]="sidenav"
+      ></app-panel>
+    </mat-accordion>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        mat-icon-button
+        (click)="sidenav.toggle()"
+        *ngIf="isHandset$ | async"
+      >
+        <mat-icon>menu</mat-icon>
+      </button>
+      <ng-template [ngIf]="userProfile">
+        <app-navbar
+          [username]="userProfile.username"
+          (logoutEmitter)="logout()"
+          class="flex w-full"
+        ></app-navbar>
+      </ng-template>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<mat-sidenav-container class="sidenav-container" *ngIf="isInitialRoute">
+  <mat-sidenav-content>
+    <mat-toolbar color="primary" class="fixed top-0 w-full z-10">
+      <ng-template [ngIf]="userProfile">
+        <app-navbar
+          [username]="userProfile.username"
+          (logoutEmitter)="logout()"
+          class="flex w-full"
+        ></app-navbar>
+      </ng-template>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,6 +1,8 @@
 {
 	"name": "Angular",
-	"build": { "dockerfile": "Dockerfile" },
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "app",
+	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
 	"features": {
 		"ghcr.io/devcontainers-contrib/features/angular-cli:2": {}
 	},

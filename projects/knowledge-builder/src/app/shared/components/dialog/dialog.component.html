@@ -1,0 +1,25 @@
+<div class="flex flex-col p-4">
+  <div
+    class="flex items-center justify-center p-2 px-2.5 mx-auto rounded-full bg-[#f2e6e7]"
+  >
+    <mat-icon [ngStyle]="{ color: 'red' }">{{ data.icon }}</mat-icon>
+  </div>
+  <h1 mat-dialog-title class="mx-auto text-center">{{ data.title }}</h1>
+  <div mat-dialog-content>
+    <p>{{ data.content }}</p>
+  </div>
+  <div mat-dialog-actions class="flex">
+    <div class="ml-auto">
+      <button mat-raised-button color="primary" (click)="onCancel()">
+        Cancelar
+      </button>
+      <button
+        mat-raised-button
+        [color]="data.mainButton.color"
+        [mat-dialog-close]="true"
+      >
+        {{ data.mainButton.title }}
+      </button>
+    </div>
+  </div>
+</div>

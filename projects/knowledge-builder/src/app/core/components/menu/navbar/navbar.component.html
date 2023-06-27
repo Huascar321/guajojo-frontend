@@ -1,0 +1,14 @@
+<div class="flex gap-3.5">
+  <img class="max-h-8 max-w-8" src="assets/logo.png" alt="logo" />
+  <span>Knowledge Builder</span>
+</div>
+<span class="example-spacer"></span>
+<div class="hidden sm:block">
+  <button mat-button [matMenuTriggerFor]="menu">
+    <span>{{ username ? username : 'Usuario' }}</span>
+    <span><mat-icon class="align-middle">keyboard_arrow_down</mat-icon></span>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button (click)="logout()" mat-menu-item>Cerrar sesión</button>
+  </mat-menu>
+</div>

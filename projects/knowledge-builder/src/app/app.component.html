@@ -1,1 +1,6 @@
-<h1 class="text-3xl font-bold underline">Hello knowledge builder!</h1>
+<app-menu
+  *ngIf="userProfile"
+  [userProfile]="userProfile"
+  [isInitialRoute]="isInitialRoute"
+></app-menu>
+<router-outlet *ngIf="!userProfile"></router-outlet>

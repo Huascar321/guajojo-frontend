@@ -1,0 +1,32 @@
+<mat-expansion-panel
+  *ngIf="_data && _data.canActivate"
+  class="mat-elevation-z0"
+  [expanded]="true"
+>
+  <mat-expansion-panel-header>
+    <mat-panel-title class="flex gap-1">
+      <mat-icon class="max-w-4">{{ _data.icon }}</mat-icon>
+      <span>{{ _data.title }}</span>
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  <mat-nav-list class="py-0">
+    <div *ngFor="let item of _data.items">
+      <a
+        routerLinkActive="active-link"
+        mat-list-item
+        class="text-white"
+        *ngIf="item.title !== 'Cerrar sesión' && item.canActivate"
+        (click)="navigate(item.routerLink); exCloseSidenav()"
+      >
+        {{ item.title }}
+      </a>
+      <a
+        mat-list-item
+        class="text-white"
+        *ngIf="item.title === 'Cerrar sesión'"
+        (click)="logout()"
+        >{{ item.title }}</a
+      >
+    </div>
+  </mat-nav-list>
+</mat-expansion-panel>
