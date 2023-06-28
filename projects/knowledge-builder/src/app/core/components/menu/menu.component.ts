@@ -40,6 +40,7 @@ export class MenuComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.menuDataSubscription = this.menuService.dataSender$.subscribe(
       (data) => {
+        console.log('data: ', data);
         this.setDefaultSystemData(data);
       }
     );

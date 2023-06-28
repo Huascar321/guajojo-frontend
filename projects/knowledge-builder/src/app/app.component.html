@@ -1,6 +1,6 @@
 <app-menu
   *ngIf="userProfile"
   [userProfile]="userProfile"
-  [isInitialRoute]="isInitialRoute"
+  [isInitialRoute]="false"
 ></app-menu>
 <router-outlet *ngIf="!userProfile"></router-outlet>

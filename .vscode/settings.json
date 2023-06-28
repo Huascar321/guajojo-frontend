@@ -1,4 +1,10 @@
 {
+  "cSpell.words": [
+    "dayjs",
+    "dialogos",
+    "propositos",
+    "sidenav"
+  ],
   "workbench.colorCustomizations": {
     "activityBar.activeBackground": "#fa1b49",
     "activityBar.background": "#fa1b49",
@@ -17,9 +23,5 @@
     "titleBar.activeForeground": "#e7e7e7",
     "titleBar.inactiveBackground": "#dd053199",
     "titleBar.inactiveForeground": "#e7e7e799"
-  },
-  "cSpell.words": [
-    "dayjs",
-    "sidenav"
-  ]
+  }
 }

@@ -8961,6 +8961,13 @@ ws@~8.11.0:
   resolved "https://registry.yarnpkg.com/ws/-/ws-8.11.0.tgz#6a0d36b8edfd9f96d8b25683db2f8d7de6e8e143"
   integrity sha512-HPG3wQd9sNQoT9xHyNCXoDUa+Xw/VevmY9FoHyQ+g+rrMn4j6FB4np7Z0OhdTgjx6MgQLK7jwSy1YecU1+4Asg==
 
+xng-breadcrumb@^10.0.0:
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/xng-breadcrumb/-/xng-breadcrumb-10.0.0.tgz#95c8a699c44d20ebaeeea0355691cf0232ddf687"
+  integrity sha512-HQpKk5BUmjIBCPRgseQXsvQ7Bb9/JT20SCRoRWeHWkpfPSDz+Uh6+j5Zzm1gikhct2kxv1criLlbHJriWFSRBw==
+  dependencies:
+    tslib "^2.3.0"
+
 y18n@^5.0.5:
   version "5.0.8"
   resolved "https://registry.yarnpkg.com/y18n/-/y18n-5.0.8.tgz#7f4934d0f7ca8c56f95314939ddcd2dd91ce1d55"
