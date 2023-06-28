@@ -15,12 +15,12 @@ import { StoryDetailComponent } from './story/story-detail/story-detail.componen
 import { StoryEditComponent } from './story/story-edit/story-edit.component';
 import { DocumentDetailComponent } from './document/document-detail/document-detail.component';
 import { DocumentEditComponent } from './document/document-edit/document-edit.component';
-import { HomeRoutingModule } from './home-routing.module';
-import { HomeComponent } from './home.component';
+import { KnowledgeRoutingModule } from './knowledge-routing.module';
+import { KnowledgeComponent } from './knowledge.component';
 
 @NgModule({
   declarations: [
-    HomeComponent,
+    KnowledgeComponent,
     IntentComponent,
     EntityComponent,
     ResponseComponent,
@@ -37,6 +37,6 @@ import { HomeComponent } from './home.component';
     DocumentDetailComponent,
     DocumentEditComponent
   ],
-  imports: [CommonModule, HomeRoutingModule]
+  imports: [CommonModule, KnowledgeRoutingModule]
 })
-export class HomeModule {}
+export class KnowledgeModule {}

@@ -7,11 +7,11 @@ import { PanelData } from '../../shared/models/menu/menu.model';
 import { BreadcrumbService } from 'xng-breadcrumb';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'app-knowledge',
+  templateUrl: './knowledge.component.html',
+  styleUrls: ['./knowledge.component.scss']
 })
-export class HomeComponent implements OnInit, OnDestroy {
+export class KnowledgeComponent implements OnInit, OnDestroy {
   @Input() data?: DashboardData[];
   isInitialRoute?: boolean;
   private navigatorSubscription?: Subscription;
@@ -24,13 +24,14 @@ export class HomeComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit(): void {
-    this.isInitialRoute = this.router.url === '/inicio';
+    this.breadcrumbService.set('@knowledge', 'Conocimientos');
+    this.isInitialRoute = this.router.url === '/conocimientos';
     this.navigatorSubscription = this.menuService.navigator.subscribe(
       (routerLink) => {
         this.router
           .navigate([routerLink], { relativeTo: this.route })
           .then(() => {
-            this.isInitialRoute = this.router.url === '/inicio';
+            this.isInitialRoute = this.router.url === '/conocimientos';
           });
       }
     );

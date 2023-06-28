@@ -1,5 +1,4 @@
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home.component';
 import { authGuard } from '../../core/guards/auth.guard';
 import { IntentComponent } from './intent/intent.component';
 import { getRouteChildren } from '../../shared/helpers/router-children.helper';
@@ -18,12 +17,14 @@ import { DocumentComponent } from './document/document.component';
 import { DocumentDetailComponent } from './document/document-detail/document-detail.component';
 import { DocumentEditComponent } from './document/document-edit/document-edit.component';
 import { NgModule } from '@angular/core';
+import { KnowledgeComponent } from './knowledge.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent,
+    component: KnowledgeComponent,
     canActivate: [authGuard],
+    data: { breadcrumb: { alias: 'knowledge' } },
     children: [
       {
         path: 'propositos',
@@ -77,4 +78,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class HomeRoutingModule {}
+export class KnowledgeRoutingModule {}
